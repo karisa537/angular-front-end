@@ -1,0 +1,115 @@
+<form  [formGroup]="myform"  (ngSubmit)="submitForm()" class="example-form">
+    <div class="my-form">
+
+
+
+
+        <div class="view intro-2">
+            <div class="full-bg-img">
+                <div class="mask rgba-black-strong flex-center">
+                    <div class="container">
+                        <div class="white-text text-center wow fadeInUp">
+                            <h2>Reister Customers</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <table class="example-full-width" cellspacing="0"><tr>
+            <td><mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>First name</mat-label >
+            <input class="form-control" matInput required formControlName="firstname">
+            </mat-form-field></td>
+            <td><mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Middle Name</mat-label>
+            <input  class="form-control" matInput formControlName="middlename" required>
+            </mat-form-field></td>
+
+            <td><mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Surname</mat-label>
+                <input class="form-control" matInput formControlName="surname" required>
+            </mat-form-field></td>
+        </tr></table>
+
+
+
+            <mat-form-field appearance="fill">
+                <mat-label>Gender</mat-label>
+                <mat-select matNativeControl required formControlName="gender">
+                <mat-option value="male">Male</mat-option>
+                <mat-option value="female">Female</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field hintLabel="Max 10 characters" appearance="fill">
+                <mat-label>Phone Number</mat-label>
+                <input type="number" matInput #input maxlength="10" min="0" placeholder="1234567890"  formControlName="phone_no">
+                <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+            </mat-form-field>
+
+            <div class="example-container">
+                <mat-form-field appearance="fill">
+                <mat-label>Select identification document</mat-label>
+                <mat-select  formControlName="identification_document">
+                    <mat-option value="identitycard">IDENTITY CARD</mat-option>
+                    <mat-option value="passport">PASSPORT</mat-option>
+                </mat-select>
+                </mat-form-field>
+                
+                <mat-form-field hintLabel="Max 10 characters" appearance="fill">
+                <mat-label>ID/PASSPORT Number</mat-label>
+                <input type="number" matInput #input maxlength="10" min="0" placeholder="1234567890" formControlName="idnopassportno" >
+                <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+                </mat-form-field>
+            </div>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput 
+                    placeholder="kal.kar@example.com" formControlName="email">
+            <mat-error >
+                Please enter a valid email address
+            </mat-error>
+            <mat-error >
+                Email is <strong>required</strong>
+            </mat-error>
+            </mat-form-field>
+
+        <p>
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Address</mat-label>
+            <textarea type="text" matInput placeholder="133-00100,Nairobi" formControlName="address"></textarea>
+            </mat-form-field>
+        </p>
+
+        <table class="example-full-width" cellspacing="0"><tr>
+            <td><mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>City</mat-label>
+            <input type="text" matInput placeholder="Nairobi" formControlName="city">
+            </mat-form-field></td>
+            <td><mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>State</mat-label>
+            <input type="text" matInput placeholder="Mathare" formControlName="state">
+            </mat-form-field></td>
+            <td><mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Postal Code</mat-label>
+            <input type="text" matInput #postalCode maxlength="5" placeholder="Ex. 94105" formControlName="postal_code">
+            <!--<mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>-->
+            </mat-form-field></td>
+        </tr></table>
+
+
+    
+        <div class="example-button-row">
+            <button mat-raised-button color="primary" reset >Submit</button>
+          </div>
+
+    </div>
+</form>

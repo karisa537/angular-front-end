@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/*font-family: 'Poppins', sans-serif;*/
+
+.example-form-field {
+    width: 100%;
+  } 
+
+  .example-form{
+    background: linear-gradient(-45deg, #106808, #081e6c, #bfd5dc, #0a8919);
+	background-size: 150% 150%;
+	animation: gradient 45s ease infinite;
+    padding: 20px;
+  }
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+
+  .example-form .my-form{
+    min-width: auto;
+    max-width: 50%;
+    width: 100;
+    border: solid linear-gradient(#106808, #081e6c, #bfd5dc, #0a8919);
+    border-radius: 15px;
+    margin: auto;
+    padding: 15px;
+    background-color: white;
+    
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  td {
+    padding-right: 8px;
+  }
+  
+  .example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
+  .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+    margin-bottom: 18px;
+  }
+  
+.example-form .my-form .example-button-row {
+   margin-right: 8px;
+   margin-left: auto;
+   margin-right: 0;
+
+}
+
+mat-option{
+    appearance: none;
+}
+
+
